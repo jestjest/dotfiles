@@ -12,7 +12,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 Plugin 'itchyny/lightline.vim'
 Plugin 'vim-scripts/fcitx.vim'
-Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
