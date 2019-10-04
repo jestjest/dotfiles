@@ -125,7 +125,7 @@ set relativenumber      "display relative line numbers"
 set wildmenu    "visual autocomplete for command menu"
 set lazyredraw  "redraw only when we need to"
 set colorcolumn=80
-set textwidth=80
+" set textwidth=80
 set encoding=utf-8
 set laststatus=2
 set noshowmode
