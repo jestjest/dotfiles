@@ -11,7 +11,7 @@ export PS1="\[\033[38;5;10m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\h:\[$(tput sgr
 # {{{ FILE MANAGEMENT
 
 alias ls='ls --color=auto'
-alias tmux='tmux -f .config/tmux/tmux.conf'
+alias tmux='tmux -f ~/.config/tmux/tmux.conf'
 
 function extract() {
   if [ -f $1 ] ; then
