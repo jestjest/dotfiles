@@ -73,6 +73,7 @@ endif
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
+  autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
 
   " Enable file type detection.
   " Use the default filetype settings, so that mail gets 'tw' set to 72,
@@ -124,8 +125,8 @@ set shiftwidth=2
 set relativenumber      "display relative line numbers"
 set wildmenu    "visual autocomplete for command menu"
 set lazyredraw  "redraw only when we need to"
-set colorcolumn=80
-set textwidth=80
+set colorcolumn=100
+set textwidth=100
 set encoding=utf-8
 set laststatus=2
 set noshowmode
@@ -150,10 +151,10 @@ nnoremap <leader>rtw :%s/\s\+$//e<CR>
 "Lightline configuration
 let g:lightline = { 'colorscheme' : 'Tomorrow_Night' }
 let g:lightline.separator = {
-      \ 'left': '', 'right': ''
+      \ 'left': '|', 'right': '|'
       \}
 let g:lightline.subseparator = {
-      \   'left': '', 'right': ''
+      \   'left': '/', 'right': '/'
       \}
 let g:lightline.tabline = {
       \   'left': [ ['tabs'] ],
@@ -165,9 +166,5 @@ let g:gruvbox_contrast_dark="hard"
 colorscheme gruvbox
 set background=dark
 set cursorline
-set termguicolors                    " For true color
 set t_8f=[38;2;%lu;%lu;%lum        " set foreground color
 set t_8b=[48;2;%lu;%lu;%lum        " set background color
-
-" Ranger instead of netrw
-let g:ranger_replace_netrw = 1

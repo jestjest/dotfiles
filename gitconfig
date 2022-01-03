@@ -1,11 +1,8 @@
 [alias]
     a = add
     ap = add -p
-    c = commit --verbose
-    ca = commit -a --verbose
     cm = commit -m
-    cam = commit -a -m
-    m = commit --amend --verbose
+  ca = commit --amend
 
     d = diff
     ds = diff --stat
@@ -15,8 +12,10 @@
     co = checkout
     cob = checkout -b
     # list branches sorted by last # modified
-     b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+    b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
     
+    rh = reset HEAD
+
     la = "!git config -l | grep alias | cut -c 7-"
     l1 = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
@@ -24,5 +23,12 @@
 
 
 [user]
-	email = jestinwith.an.e@gmail.com
+	email = jma@ixl.com
 	name = Jestin Ma
+[pull]
+	rebase = true
+[merge]
+	renamelimit = 3000
+	ff = false
+[diff]
+	renameLimit = 3000
