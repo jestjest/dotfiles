@@ -145,7 +145,6 @@ inoremap <esc> <nop>
 noremap <F7> :tabp<CR>
 noremap <F8> :tabn<CR>
 " Delete trailing whitespaces
-autocmd Filetype python,tex,latex :match ErrorMsg /\s\+$/
 nnoremap <leader>rtw :%s/\s\+$//e<CR>
 
 "Lightline configuration
@@ -168,3 +167,7 @@ set background=dark
 set cursorline
 set t_8f=[38;2;%lu;%lu;%lum        " set foreground color
 set t_8b=[48;2;%lu;%lu;%lum        " set background color
+
+" Filetypes
+autocmd Filetype python,tex,latex :match ErrorMsg /\s\+$/
+autocmd BufEnter *.yaml.tmpl :setlocal filetype=yaml
