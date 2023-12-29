@@ -11,17 +11,12 @@ export PATH="/rhome/jma/.local/bin:/rhome/jma/stuff:$PATH"
 # {{{ FILE MANAGEMENT
 
 alias ls='ls --color=auto'
-alias svnmerge='svn up && svn merge svn://nebula/ixl_ops/main/ && svn commit -m "merge trunk"'
-alias svnst='svn status'
-alias svnlog='svn log | less'
 alias m0='ssh quia@mercury0'
-alias c1='ssh cerberus1'
 alias c11='ssh cerberus11'
 alias c12='ssh cerberus12'
 alias c21='ssh cerberus21'
-alias pgsnapa='PGPASSWORD=ixl psql -h pgi-snapa -U ixl -d ixl_snap_a'
-alias pgsnapb='PGPASSWORD=ixl psql -h pgi-snapb -U ixl -d ixl_snap_b'
 alias unisonserver='unison -socket 15612 > ~/.unisonlog 2>&1 &'
+alias aws='/opt/aws/aws-cli/current/bin/aws'
 
 function extract() {
   if [ -f $1 ] ; then
@@ -44,11 +39,5 @@ function extract() {
   fi
 }
 #   }}}
-EDITOR=vim
-SVN_EDITOR=vim
-
-PATH="/rhome/jma/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/rhome/jma/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/rhome/jma/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/rhome/jma/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/rhome/jma/perl5"; export PERL_MM_OPT;
+export EDITOR=vim
+export SVN_EDITOR=vim
