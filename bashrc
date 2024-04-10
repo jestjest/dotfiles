@@ -40,9 +40,3 @@ source /usr/share/fzf/completion.bash
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
-
-# Persistent OCaml environment.
-eval `opam config env`
-
-# Add Cargo and rust.
-export PATH="$HOME/.cargo/bin:$PATH"
